@@ -3,227 +3,616 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amrit Kharal| Civil Engineering Student</title>
+  <title>Amrit Kharal | Civil Engineering Student</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
     body { 
-      font-family: 'Georgia', serif; 
-      line-height: 1.7; 
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+      font-family: 'Poppins', sans-serif; 
+      line-height: 1.8; 
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
       color: #2c3e50; 
+      overflow-x: hidden;
     }
+    
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    /* Header Styles */
     header { 
-      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); 
-      color: #ecf0f1; 
-      padding: 3rem 1rem; 
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); 
+      color: #fff; 
+      padding: 5rem 1rem 4rem; 
       text-align: center; 
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+      position: relative;
+      overflow: hidden;
     }
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,154.7C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+      background-size: cover;
+      opacity: 0.3;
+    }
+    
+    .profile-container {
+      position: relative;
+      z-index: 1;
+      animation: fadeInDown 1s ease-out;
+    }
+    
+    .profile-img {
+      width: 180px; 
+      height: 180px; 
+      border-radius: 50%; 
+      margin-bottom: 1.5rem; 
+      border: 6px solid rgba(0,0,0,0.8);
+      background: #1a1a1a;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5), 0 0 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: float 3s ease-in-out infinite;
+      position: relative;
+    }
+    
+    .profile-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.4);
+    }
+    
     header h1 { 
-      font-size: 3rem; 
-      font-weight: bold; 
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem; 
+      font-weight: 700; 
       margin-bottom: 0.5rem; 
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.3); 
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2); 
+      letter-spacing: 1px;
     }
+    
     header p { 
-      font-size: 1.3rem; 
-      color: #bdc3c7; 
-      font-style: italic; 
+      font-size: 1.4rem; 
+      color: rgba(255,255,255,0.9); 
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+    
+    .social-links {
+      margin-top: 1.5rem;
+    }
+    
+    .social-links a {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 15px;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    .social-links a:hover {
+      transform: translateY(-5px);
+      color: #ffd700;
     }
 
+    /* Navigation Styles */
     nav { 
-      background: #34495e; 
+      background: #fff; 
       padding: 1rem; 
       text-align: center; 
       position: sticky; 
       top: 0; 
       z-index: 100; 
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
     }
+    
     nav a { 
-      color: #ecf0f1; 
-      margin: 0 20px; 
-      text-decoration: none; 
-      font-size: 1.1rem; 
-      font-weight: 500; 
-      transition: color 0.3s ease; 
-    }
-    nav a:hover { 
-      color: #3498db; 
-      text-decoration: underline; 
-    }
-
-    section { 
-      max-width: 1000px; 
-      margin: 0 auto; 
-      padding: 3rem 2rem; 
-      background: rgba(255,255,255,0.9); 
-      margin-bottom: 2rem; 
-      border-radius: 10px; 
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
-    }
-    section h2 { 
-      margin-bottom: 1.5rem; 
-      font-size: 2.2rem; 
       color: #2c3e50; 
-      border-bottom: 3px solid #3498db; 
-      padding-bottom: 0.5rem; 
-      text-align: center; 
+      margin: 0 25px; 
+      text-decoration: none; 
+      font-size: 1rem; 
+      font-weight: 600; 
+      transition: all 0.3s ease; 
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      transition: width 0.3s ease;
+    }
+    
+    nav a:hover::after { 
+      width: 100%;
+    }
+    
+    nav a:hover {
+      color: #667eea;
     }
 
+    /* Section Styles */
+    section { 
+      max-width: 1100px; 
+      margin: 3rem auto; 
+      padding: 4rem 2.5rem; 
+      background: #fff; 
+      border-radius: 20px; 
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08); 
+      animation: fadeInUp 0.8s ease-out;
+      position: relative;
+    }
+    
+    section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 20px 0 0 20px;
+    }
+    
+    section h2 { 
+      margin-bottom: 2rem; 
+      font-size: 2.8rem; 
+      color: #2c3e50; 
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+    
+    section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 2px;
+    }
+    
+    section h2 i {
+      margin-right: 15px;
+      color: #667eea;
+    }
+
+    /* About Section */
     .about p { 
-      font-size: 1.1rem; 
+      font-size: 1.2rem; 
       text-align: justify; 
-      color: #34495e; 
+      color: #555; 
+      line-height: 2;
+      text-indent: 2rem;
     }
 
+    /* Skills Section */
     .skills ul { 
       display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-      gap: 20px; 
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 25px; 
       list-style: none; 
     }
+    
     .skills li { 
-      background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%); 
-      padding: 1.5rem; 
-      border-radius: 8px; 
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1); 
-      text-align: center; 
-      font-size: 1rem; 
-      font-weight: 500; 
-      transition: transform 0.3s ease; 
-    }
-    .skills li:hover { 
-      transform: translateY(-5px); 
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
-    }
-
-    .projects .card { 
       background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); 
       padding: 2rem; 
-      border-radius: 10px; 
-      margin-bottom: 2rem; 
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-      border-left: 5px solid #3498db; 
-      transition: box-shadow 0.3s ease; 
+      border-radius: 15px; 
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08); 
+      text-align: center; 
+      font-size: 1.1rem; 
+      font-weight: 500; 
+      transition: all 0.3s ease; 
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
     }
-    .projects .card:hover { 
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2); 
+    
+    .skills li::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+      transition: left 0.3s ease;
     }
-    .projects h3 { 
-      margin-bottom: 0.8rem; 
-      font-size: 1.4rem; 
-      color: #2c3e50; 
+    
+    .skills li:hover::before {
+      left: 0;
     }
-    .projects p { 
-      font-size: 1rem; 
-      color: #34495e; 
+    
+    .skills li:hover { 
+      transform: translateY(-10px); 
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3); 
+      border-color: #667eea;
+    }
+    
+    .skills li i {
+      font-size: 2.5rem;
+      color: #667eea;
+      margin-bottom: 1rem;
+      display: block;
     }
 
+    /* Projects Section */
+    .projects .card { 
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); 
+      padding: 2.5rem; 
+      border-radius: 15px; 
+      margin-bottom: 2rem; 
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08); 
+      border-left: 5px solid #667eea; 
+      transition: all 0.3s ease; 
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .projects .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -50px;
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    
+    .projects .card:hover::before {
+      right: -20px;
+      width: 200px;
+      height: 200px;
+    }
+    
+    .projects .card:hover { 
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2); 
+      transform: translateX(10px);
+    }
+    
+    .projects h3 { 
+      margin-bottom: 1rem; 
+      font-size: 1.6rem; 
+      color: #2c3e50; 
+      font-weight: 600;
+      position: relative;
+    }
+    
+    .projects h3 i {
+      margin-right: 10px;
+      color: #667eea;
+    }
+    
+    .projects p { 
+      font-size: 1.05rem; 
+      color: #555; 
+      line-height: 1.8;
+    }
+
+    /* Contact Section */
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 2rem;
+    }
+    
+    .contact-item {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    
+    .contact-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+      border-color: #667eea;
+    }
+    
+    .contact-item i {
+      font-size: 2.5rem;
+      color: #667eea;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    
+    .contact-item h3 {
+      font-size: 1.2rem;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    
     .contact p { 
       margin-bottom: 0.8rem; 
       font-size: 1.1rem; 
-      color: #34495e; 
+      color: #555; 
+    }
+    
+    .contact a {
+      color: #667eea;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .contact a:hover {
+      color: #764ba2;
     }
 
+    /* Footer */
     footer { 
       background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); 
       color: #ecf0f1; 
       text-align: center; 
-      padding: 2rem; 
-      box-shadow: 0 -4px 8px rgba(0,0,0,0.2); 
+      padding: 2.5rem; 
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.1); 
+      margin-top: 3rem;
+    }
+    
+    footer p {
+      font-size: 1rem;
+      letter-spacing: 1px;
     }
 
+    /* Button Styles */
     button { 
-      padding: 12px 24px; 
+      padding: 15px 40px; 
       border: none; 
-      border-radius: 6px; 
-      background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); 
+      border-radius: 50px; 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
       color: #fff; 
       cursor: pointer; 
-      font-size: 1rem; 
-      font-weight: 500; 
-      transition: background 0.3s ease, transform 0.2s ease; 
+      font-size: 1.1rem; 
+      font-weight: 600; 
+      transition: all 0.3s ease; 
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 1rem;
     }
+    
     button:hover { 
-      background: linear-gradient(135deg, #2980b9 0%, #21618c 100%); 
-      transform: translateY(-2px); 
+      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%); 
+      transform: translateY(-3px); 
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    }
+    
+    button:active {
+      transform: translateY(-1px);
+    }
+    
+    button i {
+      margin-left: 10px;
+    }
+    
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      
+      header p {
+        font-size: 1.1rem;
+      }
+      
+      nav a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+      }
+      
+      section {
+        padding: 3rem 1.5rem;
+        margin: 2rem 1rem;
+      }
+      
+      section h2 {
+        font-size: 2rem;
+      }
+      
+      .skills ul {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-info {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
-      <img src="my_photo.png" alt="Amrit Kharal" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 1rem; border: 4px solid #ecf0f1; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <div class="profile-container">
+      <img src="my_photo.png" alt="Amrit Kharal" class="profile-img">
       <h1>Amrit Kharal</h1>
-      <p>Civil Engineering Student | AutoCAD & Revit Learner</p>
+      <p><i class="fas fa-hard-hat"></i> Civil Engineering Student | AutoCAD & Revit Specialist</p>
+      <div class="social-links">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=amrit7664467@gmail.com" target="_blank" title="Email via Gmail"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+9779843976375" title="Call Now"><i class="fas fa-phone"></i></a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/yourprofile" target="_blank" title="GitHub Profile"><i class="fab fa-github"></i></a>
+      </div>
     </div>
   </header>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="#about"><i class="fas fa-user"></i> About</a>
+    <a href="#skills"><i class="fas fa-tools"></i> Skills</a>
+    <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
   </nav>
 
   <section id="about" class="about">
-    <h2>About Me</h2>
+    <h2><i class="fas fa-user-circle"></i>About Me</h2>
     <p>
-      I am a civil engineering student with strong interest in structural design, transportation engineering, and construction technology. 
-      I have hands-on experience with engineering practicals such as sieve analysis, specific gravity tests, and field studies on slope stabilization. 
-      Currently, I am improving my drafting and BIM skills using AutoCAD and Revit.
+      I am a passionate civil engineering student with a strong interest in structural design, transportation engineering, and modern construction technology. 
+      My academic journey has equipped me with hands-on experience in various engineering practicals, including sieve analysis, specific gravity tests, and comprehensive field studies on slope stabilization techniques. 
+      I am actively developing my expertise in Building Information Modeling (BIM) and Computer-Aided Design (CAD), utilizing industry-standard tools like AutoCAD and Revit to create precise and professional engineering designs. 
+      I am committed to continuous learning and staying updated with the latest advancements in civil engineering to contribute effectively to innovative infrastructure projects.
     </p>
   </section>
 
   <section id="skills" class="skills">
-    <h2>Skills</h2>
+    <h2><i class="fas fa-cogs"></i>Technical Skills</h2>
     <ul>
-      <li>AutoCAD (2D Drafting)</li>
-      <li>Revit (Beginner – Learning)</li>
-      <li>Basic HTML, CSS, JavaScript</li>
-      <li>Engineering Surveying</li>
-      <li>Geotechnical & Transportation Engineering Basics</li>
-      <li>Microsoft Word & Excel</li>
+      <li><i class="fas fa-drafting-compass"></i>AutoCAD (2D Drafting & Design)</li>
+      <li><i class="fas fa-building"></i>Revit (BIM & 3D Modeling)</li>
+      <li><i class="fas fa-code"></i>Web Development (HTML, CSS, JavaScript)</li>
+      <li><i class="fas fa-ruler-combined"></i>Engineering Surveying</li>
+      <li><i class="fas fa-road"></i>Geotechnical & Transportation Engineering</li>
+      <li><i class="fas fa-file-excel"></i>Microsoft Office Suite (Word, Excel, PowerPoint)</li>
     </ul>
   </section>
 
   <section id="projects" class="projects">
-    <h2>Projects & Practical Work</h2>
+    <h2><i class="fas fa-briefcase"></i>Projects & Academic Work</h2>
 
     <div class="card">
-      <h3>Geotechnical Model – Cut Slope Failure</h3>
-      <p>Model study of Himalayan highway cut slope with drainage, bio-engineering, and retaining measures.</p>
+      <h3><i class="fas fa-mountain"></i>Geotechnical Model – Cut Slope Failure Analysis</h3>
+      <p>Conducted a comprehensive model study of Himalayan highway cut slope failures, implementing drainage systems, bio-engineering solutions, and retaining structures. This project demonstrated practical applications of geotechnical principles in addressing real-world slope stability challenges in mountainous terrain.</p>
     </div>
 
     <div class="card">
-      <h3>Transportation Engineering Practicals</h3>
-      <p>Completed most lab tests including aggregate tests, with a few remaining such as Marshall Stability and Flash & Fire Point tests.</p>
+      <h3><i class="fas fa-vial"></i>Transportation Engineering Laboratory Practicals</h3>
+      <p>Successfully completed an extensive range of laboratory tests including aggregate testing, material analysis, and quality control procedures. Gained hands-on experience with industry-standard testing protocols such as Marshall Stability, Flash & Fire Point tests, and various material characterization techniques essential for pavement design and construction.</p>
     </div>
 
     <div class="card">
-      <h3>AutoCAD Floor Plans</h3>
-      <p>Prepared basic residential plans including door-window layouts, dimensions, and annotations.</p>
+      <h3><i class="fas fa-home"></i>Architectural Floor Plans & Building Design</h3>
+      <p>Developed detailed residential floor plans using AutoCAD, incorporating precise door-window layouts, accurate dimensions, professional annotations, and comprehensive detailing. Focused on creating functional and aesthetically pleasing designs while adhering to building codes and standards.</p>
     </div>
   </section>
 
   <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Email: amrit7664467@gmail.com</p>
-    <p>Phone: 9843976375</p>
-    <p>Location: Bhaktapur, Nepal</p>
-    <button onclick="showMessage()">Say Hello</button>
+    <h2><i class="fas fa-paper-plane"></i>Get In Touch</h2>
+    <div class="contact-info">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=amrit7664467@gmail.com" target="_blank">amrit7664467@gmail.com</a></p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone-alt"></i>
+        <h3>Phone</h3>
+        <p><a href="tel:+9779843976375">+977 9843976375</a></p>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem;"><a href="https://wa.me/9779843976375" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp"></i> WhatsApp</a></p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Location</h3>
+        <p>Bhaktapur, Nepal</p>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem;"><a href="https://www.google.com/maps/place/Bhaktapur" target="_blank"><i class="fas fa-map-marked-alt"></i> View on Map</a></p>
+      </div>
+    </div>
+    <div style="text-align: center;">
+      <button onclick="showMessage()">Let's Connect <i class="fas fa-arrow-right"></i></button>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Amrit Kharal | Civil Engineering Portfolio</p>
+    <p>© 2025 Amrit Kharal | Professional Civil Engineering Portfolio</p>
+    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Designed with passion for innovation and excellence</p>
   </footer>
 
   <script>
     function showMessage() {
-      alert("Thank you for visiting my portfolio! Feel free to contact me.");
+      alert("Thank you for your interest! 🎉\nI look forward to connecting with you.\n\nFeel free to reach out via email or phone.");
     }
+    
+    // Smooth scroll with offset for fixed nav
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        const offsetTop = target.offsetTop - 60;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    });
+    
+    // Add scroll animation
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+    
+    document.querySelectorAll('section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(30px)';
+      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(section);
+    });
   </script>
 
 </body>

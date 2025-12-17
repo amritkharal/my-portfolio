@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amrit Kharal| Civil Engineering Student</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      font-family: 'Georgia', serif; 
+      line-height: 1.7; 
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+      color: #2c3e50; 
+    }
+    header { 
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); 
+      color: #ecf0f1; 
+      padding: 3rem 1rem; 
+      text-align: center; 
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    }
+    header h1 { 
+      font-size: 3rem; 
+      font-weight: bold; 
+      margin-bottom: 0.5rem; 
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3); 
+    }
+    header p { 
+      font-size: 1.3rem; 
+      color: #bdc3c7; 
+      font-style: italic; 
+    }
+
+    nav { 
+      background: #34495e; 
+      padding: 1rem; 
+      text-align: center; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    }
+    nav a { 
+      color: #ecf0f1; 
+      margin: 0 20px; 
+      text-decoration: none; 
+      font-size: 1.1rem; 
+      font-weight: 500; 
+      transition: color 0.3s ease; 
+    }
+    nav a:hover { 
+      color: #3498db; 
+      text-decoration: underline; 
+    }
+
+    section { 
+      max-width: 1000px; 
+      margin: 0 auto; 
+      padding: 3rem 2rem; 
+      background: rgba(255,255,255,0.9); 
+      margin-bottom: 2rem; 
+      border-radius: 10px; 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+    }
+    section h2 { 
+      margin-bottom: 1.5rem; 
+      font-size: 2.2rem; 
+      color: #2c3e50; 
+      border-bottom: 3px solid #3498db; 
+      padding-bottom: 0.5rem; 
+      text-align: center; 
+    }
+
+    .about p { 
+      font-size: 1.1rem; 
+      text-align: justify; 
+      color: #34495e; 
+    }
+
+    .skills ul { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 20px; 
+      list-style: none; 
+    }
+    .skills li { 
+      background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%); 
+      padding: 1.5rem; 
+      border-radius: 8px; 
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1); 
+      text-align: center; 
+      font-size: 1rem; 
+      font-weight: 500; 
+      transition: transform 0.3s ease; 
+    }
+    .skills li:hover { 
+      transform: translateY(-5px); 
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
+    }
+
+    .projects .card { 
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); 
+      padding: 2rem; 
+      border-radius: 10px; 
+      margin-bottom: 2rem; 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+      border-left: 5px solid #3498db; 
+      transition: box-shadow 0.3s ease; 
+    }
+    .projects .card:hover { 
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2); 
+    }
+    .projects h3 { 
+      margin-bottom: 0.8rem; 
+      font-size: 1.4rem; 
+      color: #2c3e50; 
+    }
+    .projects p { 
+      font-size: 1rem; 
+      color: #34495e; 
+    }
+
+    .contact p { 
+      margin-bottom: 0.8rem; 
+      font-size: 1.1rem; 
+      color: #34495e; 
+    }
+
+    footer { 
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); 
+      color: #ecf0f1; 
+      text-align: center; 
+      padding: 2rem; 
+      box-shadow: 0 -4px 8px rgba(0,0,0,0.2); 
+    }
+
+    button { 
+      padding: 12px 24px; 
+      border: none; 
+      border-radius: 6px; 
+      background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); 
+      color: #fff; 
+      cursor: pointer; 
+      font-size: 1rem; 
+      font-weight: 500; 
+      transition: background 0.3s ease, transform 0.2s ease; 
+    }
+    button:hover { 
+      background: linear-gradient(135deg, #2980b9 0%, #21618c 100%); 
+      transform: translateY(-2px); 
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Amrit Kharal</h1>
+    <p>Civil Engineering Student | AutoCAD & Revit Learner</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I am a civil engineering student with strong interest in structural design, transportation engineering, and construction technology. 
+      I have hands-on experience with engineering practicals such as sieve analysis, specific gravity tests, and field studies on slope stabilization. 
+      Currently, I am improving my drafting and BIM skills using AutoCAD and Revit.
+    </p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>AutoCAD (2D Drafting)</li>
+      <li>Revit (Beginner – Learning)</li>
+      <li>Basic HTML, CSS, JavaScript</li>
+      <li>Engineering Surveying</li>
+      <li>Geotechnical & Transportation Engineering Basics</li>
+      <li>Microsoft Word & Excel</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects & Practical Work</h2>
+
+    <div class="card">
+      <h3>Geotechnical Model – Cut Slope Failure</h3>
+      <p>Model study of Himalayan highway cut slope with drainage, bio-engineering, and retaining measures.</p>
+    </div>
+
+    <div class="card">
+      <h3>Transportation Engineering Practicals</h3>
+      <p>Completed most lab tests including aggregate tests, with a few remaining such as Marshall Stability and Flash & Fire Point tests.</p>
+    </div>
+
+    <div class="card">
+      <h3>AutoCAD Floor Plans</h3>
+      <p>Prepared basic residential plans including door-window layouts, dimensions, and annotations.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: amrit7664467@gmail.com</p>
+    <p>Phone: 9843976375</p>
+    <p>Location: Bhaktapur, Nepal</p>
+    <button onclick="showMessage()">Say Hello</button>
+  </section>
+
+  <footer>
+    <p>© 2025 Amrit Kharal | Civil Engineering Portfolio</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      alert("Thank you for visiting my portfolio! Feel free to contact me.");
+    }
+  </script>
+
+</body>
+</html>

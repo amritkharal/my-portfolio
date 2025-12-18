@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amrit Kharal | Civil Engineering Student</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">  <title>Amrit Kharal | Civil Engineering Student</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
@@ -14,25 +13,19 @@
     }
     
     body { 
-      font-family: 'Poppins', sans-serif; 
+      font-family: 'Caudex', serif; 
+      font-style: italic;
+      font-weight: 400;
       line-height: 1.8; 
-      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-      background-size: 400% 400%;
-      animation: gradientShift 15s ease infinite;
-      color: #2c3e50; 
+      background: #EFF6E0;
+      color: #01161E; 
       overflow-x: hidden;
-    }
-    
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
     
     /* Header Styles */
     header { 
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); 
-      color: #fff; 
+      background: linear-gradient(135deg, #01161E 0%, #124559 100%); 
+      color: #EFF6E0; 
       padding: 5rem 1rem 4rem; 
       text-align: center; 
       position: relative;
@@ -76,9 +69,10 @@
     }
     
     header h1 { 
-      font-family: 'Playfair Display', serif;
+      font-family: 'Caudex', serif;
+      font-style: italic;
+      font-weight: 700;
       font-size: 3.5rem; 
-      font-weight: 700; 
       margin-bottom: 0.5rem; 
       text-shadow: 2px 2px 4px rgba(0,0,0,0.2); 
       letter-spacing: 1px;
@@ -110,7 +104,7 @@
 
     /* Navigation Styles */
     nav { 
-      background: #fff; 
+      background: #124559; 
       padding: 1rem; 
       text-align: center; 
       position: sticky; 
@@ -120,7 +114,7 @@
     }
     
     nav a { 
-      color: #2c3e50; 
+      color: #EFF6E0; 
       margin: 0 25px; 
       text-decoration: none; 
       font-size: 1rem; 
@@ -155,7 +149,7 @@
       max-width: 1100px; 
       margin: 3rem auto; 
       padding: 4rem 2.5rem; 
-      background: #fff; 
+      background: #AEC3B0; 
       border-radius: 20px; 
       box-shadow: 0 10px 40px rgba(0,0,0,0.08); 
       animation: fadeInUp 0.8s ease-out;
@@ -176,8 +170,10 @@
     section h2 { 
       margin-bottom: 2rem; 
       font-size: 2.8rem; 
-      color: #2c3e50; 
-      font-family: 'Playfair Display', serif;
+      color: #01161E; 
+      font-family: 'Caudex', serif;
+      font-style: italic;
+      font-weight: 700;
       text-align: center;
       position: relative;
       padding-bottom: 1rem;
@@ -218,7 +214,7 @@
     }
     
     .skills li { 
-      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); 
+      background: #EFF6E0; 
       padding: 2rem; 
       border-radius: 15px; 
       box-shadow: 0 5px 20px rgba(0,0,0,0.08); 
@@ -261,12 +257,12 @@
 
     /* Projects Section */
     .projects .card { 
-      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); 
+      background: #EFF6E0; 
       padding: 2.5rem; 
       border-radius: 15px; 
       margin-bottom: 2rem; 
       box-shadow: 0 5px 20px rgba(0,0,0,0.08); 
-      border-left: 5px solid #667eea; 
+      border-left: 5px solid #598392; 
       transition: all 0.3s ease; 
       position: relative;
       overflow: hidden;
@@ -369,8 +365,8 @@
 
     /* Footer */
     footer { 
-      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); 
-      color: #ecf0f1; 
+      background: linear-gradient(135deg, #01161E 0%, #124559 100%); 
+      color: #EFF6E0; 
       text-align: center; 
       padding: 2.5rem; 
       box-shadow: 0 -4px 20px rgba(0,0,0,0.1); 
@@ -387,11 +383,13 @@
       padding: 15px 40px; 
       border: none; 
       border-radius: 50px; 
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-      color: #fff; 
+      background: #598392; 
+      color: #EFF6E0; 
       cursor: pointer; 
       font-size: 1.1rem; 
-      font-weight: 600; 
+      font-weight: 400; 
+      font-family: 'Caudex', serif; 
+      font-style: italic; 
       transition: all 0.3s ease; 
       box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
       text-transform: uppercase;
@@ -619,6 +617,9 @@
       observer.observe(section);
     });
   </script>
+
+  <!-- Watermark -->
+  <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.05; pointer-events: none; background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80&sat=-100'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
 
 </body>
 </html>
